@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'wuliansdk.pro'
+        }
+//        debug{
+//            minifyEnabled false
+////            proguardFiles 'wuliansdk.pro'
+//        }
+    }
+    sourceSets {
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile project(':WulianSipV1')
+    compile project(':RouteBaseLibHoneyWell')
+    compile project(':WulianICamOSS')
+    compile 'javax.inject:javax.inject:1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.alibaba:fastjson:1.2.16'
+}

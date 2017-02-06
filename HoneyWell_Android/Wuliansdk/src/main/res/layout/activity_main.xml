@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <!--<include layout="@layout/titlebar_general" />-->
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/login_newer_reg" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/login_out"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/login_out" />
+
+        <Button
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/common_change_pwd" />
+
+        <Button
+            android:id="@+id/alarm_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/message_alarm_msg" />
+
+        <Button
+            android:id="@+id/alarm_video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/replay_video" />
+
+        <Button
+            android:id="@+id/camera_manage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="@dimen/margin_big"
+            android:text="@string/main_device" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+

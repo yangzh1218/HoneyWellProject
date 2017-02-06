@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wulian.sdk.demo">
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wulian.sdk.android.oem.honeywell.ipc.ui.activity.login.RegActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.wulian.sdk.android.oem.honeywell.ipc.ui.activity.login.LoginActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.wulian.sdk.android.oem.honeywell.ipc.ui.activity.login.ChangePwdActivity" android:screenOrientation="portrait"></activity>
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.wulian.sdk.demo.plugins.action.REGISTER_VIDEO" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_video_android.so" />
+            <!-- For now it does not matter in the future we should have one per device, codec, and converter (if needed) -->
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_webrtc_vid_render_factory" />
+        </receiver>
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiverFfmpeg"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.wulian.sdk.demo.codecs.action.REGISTER_VIDEO_CODEC" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_video_android.so" />
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_codec_ffmpeg_vid_init" />
+            <meta-data
+                android:name="deinit_factory"
+                android:value="pjmedia_codec_ffmpeg_vid_deinit" />
+        </receiver>
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiverVpx"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.wulian.sdk.demo.codecs.action.REGISTER_VIDEO_CODEC" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_vpx.so" />
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_codec_vpx_init" />
+            <meta-data
+                android:name="deinit_factory"
+                android:value="pjmedia_codec_vpx_deinit" />
+        </receiver>
+    </application>
+
+</manifest>

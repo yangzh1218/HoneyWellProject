@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/iv_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/selector_function_scene"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="name1sdffffddfd谁发的啥地方"
+        android:singleLine="true"
+        android:clickable="false"
+        android:enabled="false"
+        android:textColor="@color/selector_play_video_btn_text_color" />
+
+</LinearLayout>

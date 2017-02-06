@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu May 26 14:23:55 CST 2016
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=WulianICamOSS_fat.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|WulianICamOSS>~.gitignore;<jar|okhttp-3.2.0.jar>;<jar|okio-1.6.0.jar>
+includes=

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar_general" />
+
+    <EditText
+        android:id="@+id/et_wifi_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:background="@drawable/shape_round_all_white"
+        android:drawableLeft="@drawable/selector_wifi_name"
+        android:drawablePadding="@dimen/margin_normal"
+        android:drawableStart="@drawable/selector_wifi_name"
+        android:enabled="false"
+        android:hint=""
+        android:singleLine="true"
+        android:textSize="@dimen/textsize_middle" />
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/setting_input_wifi_limit"
+	    android:layout_marginLeft="@dimen/margin_normal"
+	    android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/default_margin_top"
+	    />
+    <RelativeLayout
+         android:id="@+id/rl_wifi_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_little"
+        android:background="@drawable/shape_round_all_white" >
+
+        <ImageView
+            android:id="@+id/iv_wifi_pwd_left_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_pwd_normal" />
+
+        <CheckBox
+            android:id="@+id/cb_wifi_pwd_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_checkbox_wifi_pwd" />
+
+        <EditText
+            android:id="@+id/et_wifi_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_little"
+            android:layout_marginRight="@dimen/margin_little"
+            android:layout_toLeftOf="@id/cb_wifi_pwd_show"
+            android:layout_toRightOf="@id/iv_wifi_pwd_left_draw"
+            android:background="@null"
+            android:hint="@string/setting_input_wifi_pwd"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true"
+        	android:textSize="@dimen/textsize_middle"
+            android:textCursorDrawable="@null" />
+    </RelativeLayout>
+
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/tv_config_wifi_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="250dp"
+            android:text="@string/config_how_to_speed_up_config_wifi"
+            android:textColor="@color/DeepGreen">
+        </TextView>
+		 <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/setting_link_wifi_tip"
+	        android:layout_marginTop="280dp"
+	        android:textColor="@color/normal_color"
+	        android:gravity="center_horizontal"
+	        android:textSize="@dimen/textsize_middle"
+	        />
+        <Button
+            android:id="@+id/btn_start_linkwifi"
+            style="@style/v2_btn_normal_style"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="@string/common_next_step" />
+    </RelativeLayout>
+</LinearLayout>

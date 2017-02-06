@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_device_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rectangle_device_item"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="1dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <!-- 背景最佳方案 -->
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/v2_device_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/device_item_title_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/common_icam"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_middle" />
+
+            <TextView
+                android:id="@+id/tv_isonline"
+                android:layout_width="36dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/theme_color"
+                android:gravity="center"
+                android:text="@string/main_online"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_item_title_height"
+        android:background="@color/btn_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/common_start_time"
+                android:textColor="@color/selector_btn_color"
+                android:textSize="@dimen/textsize_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/btn_text_color"
+                android:textSize="12sp"
+                android:id="@+id/tv_start_time" />
+        </LinearLayout>
+
+        <View style="@style/img_divider_vertical_v2" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:text="@string/common_end_time"
+                android:textColor="@color/selector_btn_color"
+                android:textSize="@dimen/textsize_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/btn_text_color"
+                android:textSize="12sp"
+                android:id="@+id/tv_end_time" />
+        </LinearLayout>
+        <View style="@style/img_divider_vertical_v2" />
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:text="@string/video_length"
+                android:textColor="@color/selector_btn_color"
+                android:textSize="@dimen/textsize_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/btn_text_color"
+                android:textSize="12sp"
+                android:id="@+id/tv_video_length" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_bg"
+        android:visibility="gone"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/config_download"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_download_no"
+            android:drawableStart="@drawable/icon_download_no"
+            />
+    </LinearLayout>
+</LinearLayout>

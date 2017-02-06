@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar_sure" />
+
+    <LinearLayout
+        style="@style/setting_top_shape"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/default_margin_top" >
+
+        <LinearLayout
+            android:id="@+id/ll_sd_override"
+            style="@style/setting_top_shape"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/setting_item_single_textview"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/replay_sd_override" />
+
+            <CheckBox
+                android:id="@+id/cb_sd_override"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:button="@drawable/selector_checkbox_toggle"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_recoding_only_change"
+            style="@style/setting_top_shape"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/setting_item_single_textview"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/replay_record_only_when_change" />
+
+            <CheckBox
+                 android:id="@+id/cb_record_only_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:button="@drawable/selector_checkbox_toggle"
+                android:clickable="false"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/background" >
+        </View>
+		<!-- 自定义存储时间设置,  目前已取消 -->
+        <LinearLayout
+            android:id="@+id/ll_custom_time"
+            style="@style/setting_top_shape"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/setting_item_single_textview"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:text="@string/replay_record_time_setting" />
+
+            <CheckBox
+                android:id="@+id/cb_sd_savetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:button="@drawable/selector_checkbox_toggle"
+                android:clickable="false"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_custom_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/background" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/ll_save_time"
+                style="@style/setting_middle_shape" >
+
+                <TextView
+                    style="@style/setting_item_single_textview"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/replay_save_time" />
+
+                <TextView
+                    android:id="@+id/tv_save_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:textColor="@color/control_color" />
+
+                <ImageView
+                    style="@style/setting_arrow"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/background" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/ll_save_time_day"
+                style="@style/setting_middle_shape" >
+
+                <TextView
+                    style="@style/setting_item_single_textview"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/common_repeat" />
+
+                <TextView
+                    android:id="@+id/tv_save_time_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:textColor="@color/control_color" />
+
+                <ImageView
+                    style="@style/setting_arrow"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/setting_top_shape"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/setting_item_single_textview"
+                android:text="@string/replay_record_only_when_change" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:button="@drawable/selector_checkbox_toggle"
+                android:clickable="false"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/background" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/setting_top_shape"
+        android:layout_marginTop="@dimen/default_margin_top" >
+
+        <LinearLayout
+            style="@style/setting_item_single_textview"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/replay_sd_capacity"
+                android:textSize="@dimen/textsize_large" />
+
+            <TextView
+                android:id="@+id/tv_disk_memory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_little"
+                android:layout_marginStart="@dimen/margin_little"
+                android:textSize="@dimen/textsize_small" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_disk_format"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:background="@drawable/selector_shape_round_rect_red"
+            android:enabled="false"
+            android:text="@string/replay_disk_format"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

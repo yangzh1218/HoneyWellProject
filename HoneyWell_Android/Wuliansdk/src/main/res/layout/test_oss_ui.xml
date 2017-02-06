@@ -1,0 +1,358 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_pulllisthead_bg">
+
+    <LinearLayout
+        android:id="@+id/mainview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册\n服务\n器"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_servername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入服务器的名称譬如(wuliangroup.cn)"
+                android:inputType="text"
+                android:text="sh.gg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册\n账号:"
+                android:textColor="#000000" />
+
+            <!--
+            us2gaxsrxzd2cweahxaj 
+            us12gs5kkxwy7w8k2xnt
+            -->
+
+            <EditText
+                android:id="@+id/et_registernum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入注册的账号,譬如(1001)"
+                android:inputType="text"
+                android:text="us2gaxsrxzd2cweahxaj" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册\n用户名:"
+                android:textColor="#000000" />
+
+            <!-- pml1988 qwerty -->
+
+            <EditText
+                android:id="@+id/et_registerusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入注册的用户名,譬如(1001)"
+                android:inputType="text"
+                android:text="puml" >
+            </EditText>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册\n密码:"
+                android:textColor="#000000" />
+
+            <!-- pml1988 qwerty -->
+
+            <EditText
+                android:id="@+id/et_registerpwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入注册的密码,譬如(1001)"
+                android:inputType="text"
+                android:text="pml1988" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="远程\n账号"
+                android:textColor="#000000" />
+
+            <!-- cmic03d550294d401b3f -->
+
+            <EditText
+                android:id="@+id/et_remote_sip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:hint="请输入远程Sip账号,譬如(1001)"
+                android:text="cmic030d50294d401356" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="远程\n第二个账号"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_remote_sip_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:hint="请输入远程Sip账号,譬如(1001)"
+                android:text="cmic034f50294d4052f8" />
+        </LinearLayout>
+
+        
+        
+        <CheckBox
+            android:id="@+id/cb_remote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="是否是第一个" />
+
+        <com.wulian.icam.view.widget.CameraHistorySeekBar
+            android:id="@+id/replay_historyseek"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#ffffff" />
+        <TextView
+            android:id="@+id/tv_play_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/replay_date"
+            android:drawableLeft="@drawable/replay_date_cirle"
+            android:drawableStart="@drawable/replay_date_cirle"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize_small" />
+
+        <Button
+            android:id="@+id/bt_initsip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="初始化Sip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_registeraccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注册账号"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_checkLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step-1:登陆"
+            android:visibility="visible" />
+        
+        <Button
+            android:id="@+id/bt_getSTS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step0:获取STS"
+            android:visibility="visible" />
+        
+        <Button
+            android:id="@+id/bt_init"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step1:初始化"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_setHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step2:SetHost"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_setToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step3:SetToken"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_connectOssData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step4:connectOssData"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="回放时间点"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_playback_point"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:hint="回放时间点"
+                android:text="2016-01-08 17:39:22" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_playOssData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step5:PlayOssData"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_stopPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step5:关闭播放"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_capturePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CapturePicture"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_QueryHistoryRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="Step2:查询历史记录" />
+
+        <Button
+            android:id="@+id/bt_ControlStartRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="Step3:准备播放"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/bt_ControlStopRecord"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="Step5:关闭播放"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_ControlHistoryRecordProgress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="204:控制历史记录进度"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_NotifyHistoryRecordHeartbeat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="209:发送历史记录心跳"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_recordVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecordVideo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_capturePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/lv_timeperiod"
+            android:layout_width="match_parent"
+            android:layout_height="500dip"
+            android:clickable="false"
+            android:dividerHeight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" >
+        </ListView>
+    </LinearLayout>
+
+</ScrollView>

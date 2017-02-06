@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wulian.sdk.android.oem.honeywell.ipc">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Other -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <application
+        android:name=".SDKApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme">
+        <uses-sdk
+            android:minSdkVersion="13"
+            android:targetSdkVersion="21" />
+
+        <meta-data
+            android:name="httpsPath"
+            android:value="api.sh.gg" />
+
+        <activity
+            android:name=".ui.activity.device.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.AddDeviceFirstPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.BarCodeSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.CheckBindingStateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceConfigSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceGetReadyGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceIdQueryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialogActivity" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceLaunchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceConfigFailResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.WifiInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.barcode.decode.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.play.ReplayVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.play.PlayVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity android:name=".ui.activity.device.play.VideoPlayer"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceAlreadyBindedResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.setting.DeviceSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.activity.device.setting.DeviceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity android:name=".ui.activity.device.setting.DeviceServerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.setting.HistoryVideoSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.ConfigDeviceFirstPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.share.DeviceShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+        <activity
+            android:name=".ui.activity.device.config.DeviceSendAuthRequestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wulian.sdk.android.oem.honeywell.ipc.plugins.action.REGISTER_VIDEO" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_video_android.so" />
+            <!-- For now it does not matter in the future we should have one per device, codec, and converter (if needed) -->
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_webrtc_vid_render_factory" />
+        </receiver>
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiverFfmpeg"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wulian.sdk.android.oem.honeywell.ipc.codecs.action.REGISTER_VIDEO_CODEC" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_video_android.so" />
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_codec_ffmpeg_vid_init" />
+            <meta-data
+                android:name="deinit_factory"
+                android:value="pjmedia_codec_ffmpeg_vid_deinit" />
+        </receiver>
+        <receiver
+            android:name="com.wulian.siplibrary.plugins.video.PluginReceiverVpx"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.wulian.sdk.android.oem.honeywell.ipc.codecs.action.REGISTER_VIDEO_CODEC" />
+            </intent-filter>
+
+            <meta-data
+                android:name="lib_name"
+                android:value="libpj_vpx.so" />
+            <meta-data
+                android:name="init_factory"
+                android:value="pjmedia_codec_vpx_init" />
+            <meta-data
+                android:name="deinit_factory"
+                android:value="pjmedia_codec_vpx_deinit" />
+        </receiver>
+
+        <activity android:name=".ui.activity.device.AlarmListActivity"></activity>
+    </application>
+
+</manifest>

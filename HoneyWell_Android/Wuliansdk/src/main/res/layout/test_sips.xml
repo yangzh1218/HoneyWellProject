@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:text="测试Sips" />
+
+    <EditText
+        android:id="@+id/begin_sips_et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/begin_sips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动Sips"
+        android:textColor="#000000" />
+
+    <com.wulian.icam.view.widget.CameraHistorySeekBar
+        android:id="@+id/replay_historyseek"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ffffff" />
+
+    <TextView
+        android:id="@+id/tv_play_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/replay_date"
+        android:drawableLeft="@drawable/replay_date_cirle"
+        android:drawableStart="@drawable/replay_date_cirle"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/textsize_small" />
+
+</LinearLayout>

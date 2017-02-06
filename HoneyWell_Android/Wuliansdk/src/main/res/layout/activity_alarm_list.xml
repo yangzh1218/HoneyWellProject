@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_normal">
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/titlebar_general" />
+
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <com.wulian.sdk.android.oem.honeywell.ipc.ui.widget.progress.CircularProgressBar
+            android:id="@+id/common_load_progress"
+            android:layout_width="@dimen/common_load_more_progress_size"
+            android:layout_height="@dimen/common_load_more_progress_size"
+            android:indeterminate="true"
+            android:indeterminateOnly="false"
+            android:layout_centerInParent="true"
+            app:cpb_colors="@array/gplus_colors"/>
+        <TextView
+            android:id="@+id/tv_hint"
+            android:text="@string/setting_detail_device_outline_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <com.wulian.sdk.android.oem.honeywell.ipc.ui.widget.PullListView
+            android:id="@+id/lv_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:clickable="true"
+            android:divider="@color/transparent"
+            android:dividerHeight="10dp"
+            android:listSelector="@color/transparent"
+            android:paddingEnd="@dimen/device_list_padding"
+            android:paddingLeft="@dimen/device_list_padding"
+            android:paddingRight="@dimen/device_list_padding"
+            android:paddingStart="@dimen/device_list_padding"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" >
+        </com.wulian.sdk.android.oem.honeywell.ipc.ui.widget.PullListView>
+    </RelativeLayout>
+
+</LinearLayout>
